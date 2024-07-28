@@ -112,6 +112,9 @@ cp -rf helloworld/tuic-client package/tuic-client
 cp -rf helloworld/luci-app-ssr-plus package/luci-app-ssr-plus
 #rm -rf helloworld
 
+# 克隆 adguardhome 插件
+git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
+
 # 克隆 kenzok8-packages 仓库
 git clone --depth=1 https://github.com/kenzok8/small-package.git kenzok8-packages
 cp -rf kenzok8-packages/smartdns package/smartdns
@@ -145,9 +148,12 @@ git clone --depth=1 https://github.com/sirpdboy/luci-theme-opentopd package/luci
 git clone --depth=1 https://github.com/apollo-ng/luci-theme-darkmatter.git
 cp -rf luci-theme-darkmatter/luci/themes/luci-theme-darkmatter package/luci-theme-darkmatter
 
+# 添加Opentomcat主题
+git clone https://github.com/icons88/luci-theme-opentomcat.git package/luci-theme-opentomcat
+
 # 克隆 luci-theme-opentomato 仓库
-git clone --depth=1 https://github.com/solidus1983/luci-theme-opentomato.git
-cp -rf luci-theme-opentomato/luci/themes/luci-theme-opentomato package/luci-theme-opentomato
+# git clone --depth=1 https://github.com/solidus1983/luci-theme-opentomato.git
+# cp -rf luci-theme-opentomato/luci/themes/luci-theme-opentomato package/luci-theme-opentomato
 
 # 克隆 luci-theme-rosy 仓库
 git clone --depth=1 https://github.com/rosywrt/luci-theme-rosy.git
