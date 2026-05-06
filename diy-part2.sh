@@ -18,5 +18,6 @@
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
 rm -rf feeds/luci/applications/luci-app-ksmbd
 rm -rf feeds/packages/net/ksmbd-tools
