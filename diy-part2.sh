@@ -18,4 +18,18 @@
 
 # Modify hostname
 # sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
-# sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
+# 登录密码为 空
+sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
+# SmartDNS
+# 删除旧版 smartdns
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-smartdns
+# 克隆最新 smartdns
+git clone --depth=1 https://github.com/pymumu/openwrt-smartdns.git package/smartdns
+git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+
+# adguardhome
+# 删除旧版 adguardhome
+rm -rf feeds/luci/applications/luci-app-adguardhome
+# 克隆最新 adguardhome
+git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
